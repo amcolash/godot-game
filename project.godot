@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
+[application]
+
+config/name="game"
+boot_splash/image="res://resources/img/splash.png"
+config/icon="res://resources/img/icon.png"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/stretch/aspect="keep"
+
+[rendering]
+
+quality/intended_usage/framebuffer_allocation=0
+quality/2d/use_pixel_snap=true
+environment/default_environment="res://default_env.tres"
