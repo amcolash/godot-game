@@ -11,7 +11,7 @@ func _ready():
     set_page(0)
 
 func _input(event):
-    # Close the game on ESC
+    # Close the game on ESC, TODO: REMOVE THIS
     if event is InputEventKey && event.get_scancode() == KEY_ESCAPE:
         get_tree().quit()
         return

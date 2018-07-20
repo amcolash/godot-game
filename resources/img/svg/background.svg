@@ -15,43 +15,43 @@
    version="1.1"
    id="svg4554"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
-   sodipodi:docname="splash.svg">
+   sodipodi:docname="background.svg">
   <defs
      id="defs4548">
     <filter
        style="color-interpolation-filters:sRGB;"
        inkscape:label="Drop Shadow"
-       id="filter1478">
+       id="filter1014">
       <feFlood
          flood-opacity="0.498039"
          flood-color="rgb(0,0,0)"
          result="flood"
-         id="feFlood1468" />
+         id="feFlood1004" />
       <feComposite
          in="flood"
          in2="SourceGraphic"
          operator="in"
          result="composite1"
-         id="feComposite1470" />
+         id="feComposite1006" />
       <feGaussianBlur
          in="composite1"
          stdDeviation="0"
          result="blur"
-         id="feGaussianBlur1472" />
+         id="feGaussianBlur1008" />
       <feOffset
-         dx="0.5"
-         dy="0.5"
+         dx="0.3"
+         dy="0.3"
          result="offset"
-         id="feOffset1474" />
+         id="feOffset1010" />
       <feComposite
          in="SourceGraphic"
          in2="offset"
          operator="over"
          result="composite2"
-         id="feComposite1476" />
+         id="feComposite1012" />
     </filter>
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
        id="filter1526">
       <feFlood
@@ -91,8 +91,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="643.4625"
-     inkscape:cy="283.14986"
+     inkscape:cx="750.12558"
+     inkscape:cy="214.90583"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -110,7 +110,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -141,38 +141,5 @@
        d="m 337.91628,168.91954 0.75038,128.08043 -52.11076,-83.90259 60.9809,144.4759 -71.64836,-13.38382 18.29108,-36.15593 -71.36788,-5.29962 63.08626,-46.97045 -109.07754,-31.18891 133.15381,-54.1907 -62.79052,-21.92643 208.43708,-46.57048 -149.72467,-11.858901 55.21476,-71.120444 61.51052,19.160937 -47.8047,-104.958315 135.19731,104.029137 -98.35242,33.950165 116.81257,32.051561 -117.97096,44.58036 -42.03773,68.89602 6.8741,-74.88627 z"
        id="path826"
        inkscape:connector-curvature="0" />
-    <text
-       id="text824"
-       y="257.39664"
-       x="122.46951"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d8d8d8;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter1478)"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:21.16666603px;font-family:Raleway;-inkscape-font-specification:'Raleway Medium';fill:#d8d8d8;fill-opacity:1;stroke-width:0.26458332px"
-         y="257.39664"
-         x="122.46951"
-         id="tspan822"
-         sodipodi:role="line">Loading...</tspan></text>
-    <g
-       transform="translate(-3.9510094e-7,-20.637507)"
-       id="g1082">
-      <rect
-         y="170.14775"
-         x="58.890331"
-         height="63.204468"
-         width="220.886"
-         id="rect828"
-         style="opacity:1;fill:#6a6a6a;fill-opacity:0.65178576;stroke:#000000;stroke-width:2.04870057;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-      <text
-         id="text832"
-         y="216.65131"
-         x="168.80615"
-         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;filter:url(#filter1526)"
-         xml:space="preserve"><tspan
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:42.33333206px;font-family:Raleway;-inkscape-font-specification:Raleway;text-align:center;text-anchor:middle;stroke-width:0.26458332px"
-           y="216.65131"
-           x="168.80615"
-           id="tspan830"
-           sodipodi:role="line">Untitled</tspan></text>
-    </g>
   </g>
 </svg>
