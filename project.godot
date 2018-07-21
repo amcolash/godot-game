@@ -11,14 +11,14 @@ config_version=3
 [application]
 
 config/name="game"
-run/main_scene="res://scenes/menus/title_screen.tscn"
+run/main_scene="res://scenes/menus/title_screen/title_screen.tscn"
 boot_splash/image="res://resources/img/splash.png"
 config/icon="res://resources/img/icon.png"
 
 [autoload]
 
-global_input="*res://scripts/global_input.gd"
 scene_stack="*res://scripts/scene_stack.gd"
+input_handler="*res://scripts/input_handler.gd"
 
 [display]
 
