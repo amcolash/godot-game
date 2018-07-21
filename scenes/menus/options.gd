@@ -1,8 +1,12 @@
 extends Node
 
 func _ready():
-    global_input.connect("ui_cancel", self, "back")
+    set_process_input(true)
     $CenterContainer/Buttons/Back.grab_focus()
+
+func _input(event):
+    if event.is_action_pressed("ui_cancel"):
+        back()
 
 func back():
     scene_stack.pop_scene()
