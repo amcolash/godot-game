@@ -19,12 +19,19 @@ config/icon="res://resources/img/icon.png"
 
 scene_stack="*res://scripts/scene_stack.gd"
 input_handler="*res://scripts/input_handler.gd"
+global_state="*res://scripts/global_state.gd"
+save_manager="*res://scripts/save_manager.gd"
 
 [display]
 
 window/size/width=1280
 window/size/height=720
 window/stretch/aspect="keep"
+
+[gui]
+
+theme/custom="res://resources/themes/ui_theme.tres"
+theme/custom_font="res://resources/themes/normal_font.tres"
 
 [input]
 

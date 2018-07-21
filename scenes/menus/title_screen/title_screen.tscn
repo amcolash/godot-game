@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/menus/title_screen/title_screen.gd" type="Script" id=1]
 [ext_resource path="res://resources/img/title.png" type="Texture" id=2]
 [ext_resource path="res://scenes/util/shader.tscn" type="PackedScene" id=3]
-[ext_resource path="res://resources/themes/ui_theme.tres" type="Theme" id=4]
 
-[node name="Title Screen" type="Node" index="0"]
+[node name="Title Screen" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -17,49 +16,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Shader" parent="." index="1" instance=ExtResource( 3 )]
 
-[node name="CenterContainer" type="CenterContainer" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 1280.0
-margin_bottom = 720.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-use_top_left = false
-_sections_unfolded = [ "Margin" ]
-
-[node name="ExitConfirmation" type="ConfirmationDialog" parent="CenterContainer" index="0"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 540.0
-margin_top = 325.0
-margin_right = 740.0
-margin_bottom = 395.0
-rect_min_size = Vector2( 200, 70 )
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-popup_exclusive = true
-window_title = "Please Confirm..."
-resizable = false
-dialog_text = "Are you sure?"
-dialog_hide_on_ok = true
-_sections_unfolded = [ "Dialog", "Popup" ]
-
-[node name="Buttons" type="VBoxContainer" parent="." index="3"]
+[node name="Buttons" type="VBoxContainer" parent="." index="2"]
 
 anchor_left = 0.5
 anchor_top = 1.0
@@ -94,7 +51,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -119,7 +75,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -127,7 +82,6 @@ group = null
 text = "Options"
 flat = false
 align = 1
-_sections_unfolded = [ "Size Flags", "Theme" ]
 
 [node name="Exit" type="Button" parent="Buttons" index="2"]
 
@@ -145,7 +99,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 3
-theme = ExtResource( 4 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -153,14 +106,11 @@ group = null
 text = "Exit"
 flat = false
 align = 1
-_sections_unfolded = [ "Size Flags", "Theme" ]
-
-[connection signal="confirmed" from="CenterContainer/ExitConfirmation" to="." method="quit_game"]
 
 [connection signal="pressed" from="Buttons/Start" to="." method="start_game"]
 
 [connection signal="pressed" from="Buttons/Options" to="." method="open_options"]
 
-[connection signal="pressed" from="Buttons/Exit" to="." method="confirm_quit"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="quit_game"]
 
 
