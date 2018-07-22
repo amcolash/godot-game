@@ -7,12 +7,16 @@ func _ready():
 func toggle():
     if $PopupDialog.visible:
         $PopupDialog.hide()
+        get_tree().paused = false
     else:
-        $PopupDialog.popup()
+        get_tree().paused = true
+        $PopupDialog.show()
+        $PopupDialog/VBoxContainer/Resume.grab_focus()
 
 # If the actual button is clicked on instead of a key press
 func options_back():
-    $PopupDialog.hide()
+    toggle()
 
 func exit():
+    get_tree().paused = false
     scene_stack.pop_scene()

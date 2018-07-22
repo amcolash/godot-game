@@ -5,19 +5,20 @@
 
 [node name="PauseContainer" type="Node" index="0"]
 
+pause_mode = 2
 script = ExtResource( 1 )
+_sections_unfolded = [ "Pause" ]
 
 [node name="PopupDialog" type="PopupDialog" parent="." index="0"]
 
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -200.0
-margin_top = -197.5
+margin_top = -170.5
 margin_right = 200.0
-margin_bottom = 197.5
+margin_bottom = 170.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -30,13 +31,11 @@ _sections_unfolded = [ "Theme" ]
 [node name="VBoxContainer" type="VBoxContainer" parent="PopupDialog" index="0"]
 
 anchor_left = 0.0
-anchor_top = 0.5
+anchor_top = 0.0
 anchor_right = 1.0
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 margin_left = 30.0
-margin_top = -164.5
 margin_right = -30.0
-margin_bottom = 164.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -44,15 +43,16 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 20
-alignment = 0
+alignment = 1
 _sections_unfolded = [ "Margin", "custom_constants" ]
 
 [node name="Options Buttons" parent="PopupDialog/VBoxContainer" index="0" instance=ExtResource( 2 )]
 
 anchor_right = 0.0
 anchor_bottom = 0.0
+margin_top = 38.0
 margin_right = 340.0
-margin_bottom = 136.0
+margin_bottom = 138.0
 
 [node name="MarginContainer" type="MarginContainer" parent="PopupDialog/VBoxContainer" index="1"]
 
@@ -60,9 +60,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 156.0
+margin_top = 158.0
 margin_right = 340.0
-margin_bottom = 181.0
+margin_bottom = 183.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -77,9 +77,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 201.0
+margin_top = 203.0
 margin_right = 340.0
-margin_bottom = 259.0
+margin_bottom = 243.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -101,9 +101,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 279.0
+margin_top = 263.0
 margin_right = 340.0
-margin_bottom = 337.0
+margin_bottom = 303.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2

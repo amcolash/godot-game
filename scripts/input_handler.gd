@@ -5,6 +5,7 @@ signal ui_cancel
 
 func _ready():
     set_process_input(true)
+    set_pause_mode(PAUSE_MODE_PROCESS)
 
 func _input(event):
     check_input(event, "ui_select")
