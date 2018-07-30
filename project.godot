@@ -30,7 +30,6 @@ window/stretch/aspect="keep"
 
 [gui]
 
-theme/custom="res://resources/themes/ui_theme.tres"
 theme/custom_font="res://resources/themes/normal_font.tres"
 
 [input]

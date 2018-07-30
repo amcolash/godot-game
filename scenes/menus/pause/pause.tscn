@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/menus/pause/pause.gd" type="Script" id=1]
-[ext_resource path="res://scenes/menus/options/options_buttons.tscn" type="PackedScene" id=2]
+[ext_resource path="res://resources/themes/ui_theme.tres" type="Theme" id=2]
+[ext_resource path="res://scenes/menus/options/options_buttons.tscn" type="PackedScene" id=3]
 
-[node name="PauseContainer" type="Node" index="0"]
+[node name="PauseContainer" type="Node"]
 
 pause_mode = 2
 script = ExtResource( 1 )
@@ -11,6 +12,7 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="PopupDialog" type="PopupDialog" parent="." index="0"]
 
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -25,6 +27,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+theme = ExtResource( 2 )
 popup_exclusive = false
 _sections_unfolded = [ "Theme" ]
 
@@ -46,7 +49,7 @@ custom_constants/separation = 20
 alignment = 1
 _sections_unfolded = [ "Margin", "custom_constants" ]
 
-[node name="Options Buttons" parent="PopupDialog/VBoxContainer" index="0" instance=ExtResource( 2 )]
+[node name="Options Buttons" parent="PopupDialog/VBoxContainer" index="0" instance=ExtResource( 3 )]
 
 anchor_right = 0.0
 anchor_bottom = 0.0

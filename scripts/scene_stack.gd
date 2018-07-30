@@ -4,7 +4,7 @@ var stack = []
 
 func _ready():
     # Push the main scene onto the stack when created
-    stack.push_front(ProjectSettings.get_setting("application/run/main_scene"))
+    stack.push_front(get_tree().get_current_scene())
 
 func push_scene(scenePath):
     var file = File.new()
@@ -21,4 +21,5 @@ func pop_scene():
         print ("popped scene: " + stack.pop_front())
         get_tree().change_scene(stack.front())
     else:
-        print("ERROR: Popping empty stack")
+        print("popping parent of stack, killing game")
+        get_tree().quit()
