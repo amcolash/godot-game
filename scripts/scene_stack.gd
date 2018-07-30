@@ -3,8 +3,10 @@ extends Node
 var stack = []
 
 func _ready():
-    # Push the main scene onto the stack when created
-    stack.push_front(get_tree().get_current_scene())
+    # If the game was started by the main scene then push it (real good) onto the stack
+    var name = get_tree().get_current_scene().get_path().get_name(1)
+    if name.casecmp_to("Title Screen") == 0:
+        stack.push_front(ProjectSettings.get_setting("application/run/main_scene"))
 
 func push_scene(scenePath):
     var file = File.new()
