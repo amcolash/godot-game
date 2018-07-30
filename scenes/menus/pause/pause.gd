@@ -1,4 +1,4 @@
-extends Node
+extends CanvasLayer
 
 func _ready():
     input_handler.connect("ui_cancel", self, "toggle")
@@ -14,7 +14,7 @@ func toggle():
         $PopupDialog/VBoxContainer/Resume.grab_focus()
 
 # If the actual button is clicked on instead of a key press
-func options_back():
+func resume():
     toggle()
 
 func exit():

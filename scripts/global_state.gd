@@ -11,6 +11,6 @@ var options = {
 
 var game = {
     "filename": "save1.save",
-    "currentScene": "res://scenes/game/maps/intro.tscn",
-    "position": Vector2(50, 50)
+    "current_scene": null,
+    "position": null
 }

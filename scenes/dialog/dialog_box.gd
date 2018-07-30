@@ -13,7 +13,6 @@ func _ready():
         load(avatar.resource_path)
         $Canvas/Avatar.set_texture(avatar)
 
-    set_process_input(true)
     set_page(0)
 
 func _input(event):

@@ -1,10 +1,7 @@
-extends Node2D
+extends KinematicBody2D
 
 var velocity = Vector2(0, 0)
 var max_speed = 200
-
-func _ready():
-    set_process(true)
 
 func _process(delta):
     velocity.x = 0
@@ -22,4 +19,4 @@ func _process(delta):
     if velocity.length() > 1.0:
         velocity = velocity.normalized()
 
-    position += (velocity * delta * max_speed)
+    move_and_collide(velocity * delta * max_speed)
