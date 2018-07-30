@@ -7,11 +7,12 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="1280"
-   height="720"
-   viewBox="0 0 338.66666 190.5"
+   width="1920"
+   height="1080"
+   viewBox="0 0 507.99999 285.75"
    version="1.1"
    id="svg4554"
    inkscape:version="0.92.3 (2405546, 2018-03-11)"
@@ -19,7 +20,7 @@
   <defs
      id="defs4548">
     <filter
-       style="color-interpolation-filters:sRGB;"
+       style="color-interpolation-filters:sRGB"
        inkscape:label="Drop Shadow"
        id="filter1014">
       <feFlood
@@ -91,8 +92,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.49497475"
-     inkscape:cx="750.12558"
-     inkscape:cy="214.90583"
+     inkscape:cx="896.57101"
+     inkscape:cy="508.58435"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -110,7 +111,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -118,31 +119,18 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-106.49998)">
-    <rect
-       style="opacity:1;fill:#555555;fill-opacity:1;stroke:none;stroke-width:3.21903706;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect812"
-       width="338.66666"
-       height="190.5"
-       x="0"
-       y="106.49998" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path824"
-       d="m 140.22917,182.09522 74.83928,103.94345 -91.09226,-38.17559 133.42559,82.39882 -66.14583,30.61605 -6.04762,-40.06546 -61.23214,37.04167 24.19048,-74.8393 L 41.199404,320.81249 118.30655,199.48213 54.428574,218.00296 197.30357,59.25296 68.41369,136.3601 72.19345,46.40177 133.42559,26.369029 33.639884,-31.461327 204.10714,-25.035733 143.63095,59.63093 257.40178,18.053553 187.09821,122.75296 l 5.66964,80.50893 -37.79761,-65.01191 z"
-       style="fill:#121212;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
-    <path
-       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
-       d="m 179.16071,200.23807 103.94345,-74.83928 -38.17559,91.09226 82.39882,-133.425593 30.61605,66.145833 -40.06546,6.04762 37.04167,61.23214 -74.8393,-24.19048 37.79763,106.96727 -121.33036,-77.10715 18.52083,63.87798 -158.749999,-142.875 77.107139,128.88988 -89.95833,-3.77976 -20.032737,-61.23214 -57.830356,99.78571 6.425594,-170.46726 84.666666,60.47619 -41.57738,-113.770833 104.699403,70.303573 80.50893,-5.66964 -65.01191,37.79761 z"
-       id="path814"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:#f0f0f0;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 337.91628,168.91954 0.75038,128.08043 -52.11076,-83.90259 60.9809,144.4759 -71.64836,-13.38382 18.29108,-36.15593 -71.36788,-5.29962 63.08626,-46.97045 -109.07754,-31.18891 133.15381,-54.1907 -62.79052,-21.92643 208.43708,-46.57048 -149.72467,-11.858901 55.21476,-71.120444 61.51052,19.160937 -47.8047,-104.958315 135.19731,104.029137 -98.35242,33.950165 116.81257,32.051561 -117.97096,44.58036 -42.03773,68.89602 6.8741,-74.88627 z"
-       id="path826"
-       inkscape:connector-curvature="0" />
+     transform="translate(0,-11.249981)">
+    <image
+       sodipodi:absref="/home/andrew/Github/godot-game/resources/img/svg/background.svg"
+       xlink:href="background.svg"
+       width="508"
+       height="285.75"
+       preserveAspectRatio="none"
+       id="image894"
+       x="-2.4999999e-06"
+       y="11.24998" />
     <g
-       transform="translate(-3.9510094e-7,-20.41072)"
+       transform="matrix(1.5000003,0,0,1.5000003,-5.1392651e-5,-178.87432)"
        id="g1082-8">
       <rect
          y="170.14775"
