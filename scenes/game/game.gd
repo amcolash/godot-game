@@ -13,12 +13,13 @@ func _ready():
     scene_instance.set_name("MainScene")
     $Scene.add_child(scene_instance)
 
-    if position == null:
-        var start = scene_instance.get_node("Start")
-        if start != null:
-            position = start.position
+    var start = scene_instance.get_node("Start")
+    if start != null:
+        position = start.position
 
-    $Player.position = position
+    if position != null:
+        $Player.position = position
 
-func _process(delta):
-    $RotationTest.rotation += delta
+    var grid = load("res://scenes/util/tilemap_grid.tscn")
+    var grid_instance = grid.instance()
+    scene_instance.add_child(grid_instance)
