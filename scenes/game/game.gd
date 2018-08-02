@@ -16,7 +16,9 @@ func _ready():
     if position == null:
         var start = scene_instance.get_node("Start")
         if start != null:
-            $Player.position = start.position
+            position = start.position
+
+    $Player.position = position
 
 func _process(delta):
     $RotationTest.rotation += delta

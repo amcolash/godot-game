@@ -1,11 +1,16 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
 
-[node name="Node" type="Node" index="0"]
+[ext_resource path="res://resources/tilesets/tiled/scene1.tmx" type="PackedScene" id=1]
+[ext_resource path="res://scenes/util/tilemap_grid.tscn" type="PackedScene" id=2]
 
-[node name="Start" type="Node2D" parent="." index="0"]
+[node name="scene1" index="0" instance=ExtResource( 1 )]
 
-position = Vector2( 128, 128 )
-scale = Vector2( 0.2, 0.2 )
+[node name="Start" type="Node2D" parent="." index="3"]
+
+position = Vector2( 417.632, 345.148 )
+scale = Vector2( 0.25, 0.25 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="TilemapGrid" parent="." index="5" instance=ExtResource( 2 )]
 
 

@@ -6,11 +6,11 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 31.7104, 31.7604 )
+extents = Vector2( 31.372, 31.4445 )
 
 [node name="Player" type="KinematicBody2D"]
 
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.25, 0.25 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -25,13 +25,14 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+one_way_collision = true
 
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 
 anchor_mode = 1
 rotating = false
 current = true
-zoom = Vector2( 1, 1 )
+zoom = Vector2( 0.25, 0.25 )
 limit_left = -10000000
 limit_top = -10000000
 limit_right = 10000000
@@ -39,16 +40,17 @@ limit_bottom = 10000000
 limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
+smoothing_enabled = true
+smoothing_speed = 15.0
 offset_v = 0.0
 offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
+drag_margin_left = 0.02
+drag_margin_top = 0.02
+drag_margin_right = 0.02
+drag_margin_bottom = 0.02
 editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
+_sections_unfolded = [ "Drag Margin", "Smoothing" ]
 
 

@@ -18,6 +18,7 @@ script = ExtResource( 1 )
 
 editor/display_folded = true
 position = Vector2( 207.402, 260.937 )
+scale = Vector2( 0.25, 0.25 )
 input_pickable = false
 collision_layer = 1
 collision_mask = 1

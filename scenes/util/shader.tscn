@@ -3,10 +3,6 @@
 [ext_resource path="res://resources/shaders/glitchy.shader" type="Shader" id=1]
 [ext_resource path="res://resources/img/white.png" type="Texture" id=2]
 
-
-
-
-
 [sub_resource type="ShaderMaterial" id=1]
 
 render_priority = 0

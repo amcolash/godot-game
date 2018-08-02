@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dungeon_tiles.png-0b456a1b491871d880ef1097fa7bbb55.stex"
+path="res://.import/tiled.png-ef727fc4b3b4a5e804e2f623484b6474.stex"
 
 [deps]
 
-source_file="res://resources/tilesets/dungeon_tiles.png"
-dest_files=[ "res://.import/dungeon_tiles.png-0b456a1b491871d880ef1097fa7bbb55.stex" ]
+source_file="res://addons/tiled_importer/tiled.png"
+dest_files=[ "res://.import/tiled.png-ef727fc4b3b4a5e804e2f623484b6474.stex" ]
 
 [params]
 
