@@ -6,7 +6,8 @@ extends Node
 var options = {
     "filename": "options.save",
     "music": true,
-    "sfx": true
+    "sfx": true,
+    "vsync": true
 }
 
 var game = {
@@ -14,3 +15,7 @@ var game = {
     "current_scene": null,
     "position": null
 }
+
+# Called after a load to set some special things up
+func post_load_init():
+    OS.set_use_vsync(options.vsync);

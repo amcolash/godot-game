@@ -4,17 +4,17 @@ extends Node
 var cleanup = false
 
 func _ready():
-    # Load options on boot
+    # Load options on boot, this happens after inital state created.
+    # This means that new options are added automatically. Might want
+    # to clean old (unused) entries at some point...
     load_data("options.save", "options")
 
-# Note: This can be called from anywhere inside the tree.  This function is path independent.
-# Go through everything in the persist category and ask them to return a dict of relevant variables
+
 func save_data(data):
     var file = File.new()
     file.open("user://" + data.filename, File.WRITE)
     file.store_line(to_json(data))
 
-# Note: This can be called from anywhere inside the tree. This function is path independent.
 func load_data(filename, statename):
     var file = File.new()
     if cleanup:
@@ -31,3 +31,5 @@ func load_data(filename, statename):
         global_state[statename][k] = data[k]
 
     file.close()
+
+    global_state.post_load_init()
