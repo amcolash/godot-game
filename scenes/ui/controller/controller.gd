@@ -17,27 +17,43 @@ func _ready():
             if child.get("visible") != null:
                 child.visible = false
 
+func _input(event):
+    if event is InputEventMouseButton:
+        if event.button_index == BUTTON_LEFT:
+            if event.pressed:
+                var bounds = Rect2(initial_pos, control.rect_size)
+                if bounds.has_point(get_viewport().get_mouse_position()):
+                    is_hovered = true
+            else:
+                is_hovered = false
+                control.set_position(initial_pos)
+
+                _simulate_action("ui_right", false)
+                _simulate_action("ui_left", false)
+                _simulate_action("ui_down", false)
+                _simulate_action("ui_up", false)
+
+# TODO: 8-axis instead of 4-axis
 func _process(delta):
     if not active:
         return
 
-    # Clear previous press state
-    _simulate_action("ui_right", false)
-    _simulate_action("ui_left", false)
-    _simulate_action("ui_down", false)
-    _simulate_action("ui_up", false)
-
     if is_hovered && Input.is_mouse_button_pressed(BUTTON_LEFT):
-        var pos = get_viewport().get_mouse_position()
-        pos -= (control.rect_size / 2)
+        var cursor = get_viewport().get_mouse_position()
+        var pos = cursor - (control.rect_size / 2)
 
         var offset = (pos - initial_pos)
         var offset_len = offset.length()
 
-        if offset_len < max_dist / 3:
+        if offset_len < max_dist / 2:
             offset.x = 0
             offset.y = 0
         else:
+            _simulate_action("ui_right", false)
+            _simulate_action("ui_left", false)
+            _simulate_action("ui_down", false)
+            _simulate_action("ui_up", false)
+
             if abs(offset.x) > abs(offset.y):
                 offset.y = 0
                 if offset.x > 0:
@@ -57,14 +73,6 @@ func _process(delta):
                     _simulate_action("ui_up", true)
 
         control.set_position(initial_pos + offset)
-    else:
-        control.set_position(initial_pos)
-
-func _on_TextureRect_mouse_entered():
-    is_hovered = true
-
-func _on_TextureRect_mouse_exited():
-    is_hovered = false
 
 func _on_Confirm_button_down():
     _simulate_action("ui_accept", true)

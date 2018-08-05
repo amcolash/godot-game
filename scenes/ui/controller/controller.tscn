@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://scenes/ui/buttons/controller.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/controller/controller.gd" type="Script" id=1]
 [ext_resource path="res://resources/img/buttons/joystick_down.png" type="Texture" id=2]
 [ext_resource path="res://resources/img/buttons/confirm.png" type="Texture" id=3]
 [ext_resource path="res://resources/img/buttons/confirm_down.png" type="Texture" id=4]
@@ -9,7 +9,7 @@
 [ext_resource path="res://resources/img/buttons/pause.png" type="Texture" id=7]
 [ext_resource path="res://resources/img/buttons/pause_down.png" type="Texture" id=8]
 
-[node name="Controller" type="CanvasLayer" index="0"]
+[node name="Controller" type="CanvasLayer"]
 
 layer = 1
 offset = Vector2( 0, 0 )
@@ -124,10 +124,6 @@ texture_pressed = ExtResource( 8 )
 expand = true
 stretch_mode = 5
 _sections_unfolded = [ "Rect" ]
-
-[connection signal="mouse_entered" from="Directional" to="." method="_on_TextureRect_mouse_entered"]
-
-[connection signal="mouse_exited" from="Directional" to="." method="_on_TextureRect_mouse_exited"]
 
 [connection signal="button_down" from="Confirm" to="." method="_on_Confirm_button_down"]
 
