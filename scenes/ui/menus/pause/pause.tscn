@@ -4,8 +4,7 @@
 [ext_resource path="res://resources/themes/ui_theme.tres" type="Theme" id=2]
 [ext_resource path="res://scenes/ui/menus/options/options_buttons.tscn" type="PackedScene" id=3]
 
-
-[node name="PauseContainer" type="CanvasLayer"]
+[node name="PauseContainer" type="CanvasLayer" index="0"]
 
 pause_mode = 2
 layer = 1
@@ -128,7 +127,7 @@ text = "Exit"
 flat = false
 align = 1
 
-[connection signal="pressed" from="PopupDialog/VBoxContainer/Resume" to="." method="resume"]
+[connection signal="pressed" from="PopupDialog/VBoxContainer/Resume" to="." method="hide"]
 
 [connection signal="pressed" from="PopupDialog/VBoxContainer/Exit" to="." method="exit"]
 

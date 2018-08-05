@@ -78,6 +78,13 @@ func _on_Cancel_button_down():
 func _on_Cancel_button_up():
     _simulate_action("ui_cancel", false)
 
+func _on_Pause_button_down():
+    _simulate_action("ui_pause", true)
+
+func _on_Pause_button_up():
+    _simulate_action("ui_pause", false)
+
+
 # Need to do this because of this: https://github.com/godotengine/godot/issues/11868
 func _simulate_action(action, pressed):
     var event = InputEventAction.new()

@@ -3,9 +3,6 @@ extends Node
 export var use_grid = true
 
 func _ready():
-    input_handler.connect("ui_cancel", self, "cancel")
-    input_handler.connect("ui_accept", self, "accept")
-
     var current_scene = global_state.game.current_scene
     var position = global_state.game.position
 
@@ -31,9 +28,3 @@ func _ready():
         var grid = load("res://scenes/util/tilemap_grid.tscn")
         var grid_instance = grid.instance()
         scene_instance.add_child(grid_instance)
-
-func accept():
-    print("game - accept")
-
-func cancel():
-    print("game - cancel")
