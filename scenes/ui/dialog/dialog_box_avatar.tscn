@@ -1,8 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/dialog/dialog_box.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ui/dialog/dialog_box.gd" type="Script" id=1]
 [ext_resource path="res://resources/img/icon.png" type="Texture" id=2]
 [ext_resource path="res://resources/img/hero_steampunk.png" type="Texture" id=3]
+
 
 [node name="Dialog Box" type="Node" index="0"]
 

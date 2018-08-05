@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/menus/title_screen/title_screen.gd" type="Script" id=1]
-[ext_resource path="res://resources/img/title.png" type="Texture" id=2]
+[ext_resource path="res://scenes/ui/menus/title_screen/title_screen.gd" type="Script" id=1]
+[ext_resource path="res://resources/img/backgrounds/title.png" type="Texture" id=2]
 [ext_resource path="res://scenes/util/shader.tscn" type="PackedScene" id=3]
 [ext_resource path="res://resources/themes/ui_theme.tres" type="Theme" id=4]
+[ext_resource path="res://scenes/util/fps.tscn" type="PackedScene" id=5]
 
 [node name="Title Screen" type="Node"]
 
@@ -20,6 +21,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Buttons" type="VBoxContainer" parent="." index="2"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
@@ -109,6 +111,8 @@ group = null
 text = "Exit"
 flat = false
 align = 1
+
+[node name="FPS" parent="." index="3" instance=ExtResource( 5 )]
 
 [connection signal="pressed" from="Buttons/Start" to="." method="start_game"]
 

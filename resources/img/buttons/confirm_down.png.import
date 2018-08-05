@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/splash.png-4fff05ae6a6b91ec806228a9e34b060a.stex"
+path="res://.import/confirm_down.png-046072541d5b859f743bc98930037c98.stex"
 
 [deps]
 
-source_file="res://resources/img/splash.png"
-dest_files=[ "res://.import/splash.png-4fff05ae6a6b91ec806228a9e34b060a.stex" ]
+source_file="res://resources/img/buttons/confirm_down.png"
+dest_files=[ "res://.import/confirm_down.png-046072541d5b859f743bc98930037c98.stex" ]
 
 [params]
 

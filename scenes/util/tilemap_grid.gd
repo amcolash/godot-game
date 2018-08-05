@@ -11,7 +11,6 @@ var colors = [
 
 func _ready():
     append_recursive(get_parent())
-    print(tilemaps)
 
 func append_recursive(parent):
     if parent != null:
@@ -28,7 +27,7 @@ func _draw():
         var position = bounds.position * tilemap.cell_size
         var dimensions = bounds.size * tilemap.cell_size
 
-        var color = colors[i]
+        var color = colors[i % colors.size()]
 
         for x in range(position.x, position.x + dimensions.x, tilemap.cell_size.x):
             draw_line(Vector2(x, position.y), Vector2(x, position.y + dimensions.y), color)
