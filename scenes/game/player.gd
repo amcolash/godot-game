@@ -2,33 +2,41 @@ extends KinematicBody2D
 
 signal collision_event
 
-export var max_speed = 150
+const SPEED = 2 # powers of two: 1, 2, 4, 8, 16
 
-var velocity = Vector2(0, 0)
+const UP = Vector2(0, -1)
+const DOWN = Vector2(0, 1)
+const LEFT = Vector2(-1, 0)
+const RIGHT = Vector2(1, 0)
+const STOP = Vector2(0, 0)
+
+const CELL_SIZE = 16
+
+var step = 0
+var direction = STOP
 
 func _physics_process(delta):
-    var up = 1 if Input.is_action_pressed("ui_up") else 0
-    var down = 1 if Input.is_action_pressed("ui_down") else 0
-    var left = 1 if Input.is_action_pressed("ui_left") else 0
-    var right = 1 if Input.is_action_pressed("ui_right") else 0
+    step_move("ui_up", UP)
+    step_move("ui_down", DOWN)
+    step_move("ui_left", LEFT)
+    step_move("ui_right", RIGHT)
 
-    if (up + down + left + right) == 0:
-        velocity = velocity * 0.8
-    else:
-        velocity.x = right - left
-        velocity.y = down - up
-        if velocity.length() > 1:
-            velocity = velocity.normalized()
+func step_move(action, dir):
+    if (Input.is_action_pressed(action) && direction == STOP) || dir == direction:
+        direction = dir
+        step += 1
 
-    var offset = Vector2(velocity * delta * max_speed)
+        var collision = move_and_collide(direction * SPEED)
+        handle_collisions(collision)
 
-    var collision = move_and_collide(offset)
-    if has_metadata(collision):
-        emit_signal("collision_event", collision)
+        $Camera2D.align()
 
-    $Camera2D.align()
+        if step == CELL_SIZE / SPEED:
+            direction = STOP
+            step = 0
 
-func has_metadata(collision):
-    return (collision != null &&
+func handle_collisions(collision):
+    if (collision != null &&
         collision.collider != null &&
-        collision.collider.get_meta_list().size() > 0)
+        collision.collider.get_meta_list().size() > 0):
+            emit_signal("collision_event", collision)

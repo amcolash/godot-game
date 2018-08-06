@@ -226,7 +226,7 @@
     <property name="Teleport" value="0"/>
    </properties>
   </object>
-  <object id="9" name="Start" x="420" y="344">
+  <object id="9" name="Start" x="408" y="332">
    <point/>
   </object>
  </objectgroup>

@@ -20,9 +20,9 @@ func _ready():
             position = start.position
 
     if position != null:
-        # Snap to grid, 8 instead of 16 because the player is in the center, not top-left
-        $Player.position.x = round(position.x / 8) * 8
-        $Player.position.y = round(position.y / 8) * 8
+        # Snap player to the grid
+        $Player.position.x = round(position.x / 16) * 16
+        $Player.position.y = round(position.y / 16) * 16
 
     if use_grid:
         var grid = load("res://scenes/util/tilemap_grid.tscn")

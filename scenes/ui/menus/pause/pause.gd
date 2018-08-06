@@ -14,7 +14,7 @@ func toggle():
 func show():
     get_tree().paused = true
     $PopupDialog.show()
-    $PopupDialog/VBoxContainer/Resume.grab_focus()
+    $PopupDialog/MarginContainer/VBoxContainer/Resume.grab_focus()
 
 func hide():
     $PopupDialog.hide()
