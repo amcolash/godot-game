@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+# This code comes almost entirelly from a grid snapping tutorial by
+# Airvikar found here: https://www.youtube.com/watch?v=6h79ZiJWZYA
+
 signal collision_event
 
 const SPEED = 2 # powers of two: 1, 2, 4, 8, 16
