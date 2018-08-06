@@ -22,9 +22,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -200.0
-margin_top = -186.5
+margin_top = -155.5
 margin_right = 200.0
-margin_bottom = 186.5
+margin_bottom = 155.5
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -33,7 +33,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 theme = ExtResource( 2 )
 popup_exclusive = false
-_sections_unfolded = [ "Size Flags", "Theme" ]
+_sections_unfolded = [ "Theme" ]
 
 [node name="MarginContainer" type="MarginContainer" parent="PopupDialog" index="0"]
 
@@ -59,7 +59,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_left = 20.0
 margin_right = 380.0
-margin_bottom = 373.0
+margin_bottom = 325.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -68,15 +68,14 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_constants/separation = 20
 alignment = 1
-_sections_unfolded = [ "Margin", "custom_constants" ]
+_sections_unfolded = [ "custom_constants" ]
 
 [node name="Options Buttons" parent="PopupDialog/MarginContainer/VBoxContainer" index="0" instance=ExtResource( 3 )]
 
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 24.0
 margin_right = 360.0
-margin_bottom = 184.0
+margin_bottom = 160.0
 
 [node name="MarginContainer" type="MarginContainer" parent="PopupDialog/MarginContainer/VBoxContainer" index="1"]
 
@@ -84,9 +83,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 204.0
+margin_top = 180.0
 margin_right = 360.0
-margin_bottom = 229.0
+margin_bottom = 205.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -101,9 +100,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 249.0
+margin_top = 225.0
 margin_right = 360.0
-margin_bottom = 289.0
+margin_bottom = 265.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -125,9 +124,9 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 309.0
+margin_top = 285.0
 margin_right = 360.0
-margin_bottom = 349.0
+margin_bottom = 325.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
