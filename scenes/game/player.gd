@@ -18,6 +18,11 @@ const CELL_SIZE = 16
 var step = 0
 var direction = STOP
 
+func ready():
+    var fade_layer = get_parent().get_node("FadeLayer")
+    if fade_layer != null:
+        $SceneTimer.wait_time = fade_layer.fade_duration * 1.5
+
 func _physics_process(delta):
     if $SceneTimer.get_time_left() > 0:
         return

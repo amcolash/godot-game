@@ -13,7 +13,8 @@ var options = {
 var save = {
     "filename": "save1.save",
     "current_scene": null,
-    "position": null
+    "position": null,
+    "teleport_id": null
 }
 
 var Root = null

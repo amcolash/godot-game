@@ -12,14 +12,27 @@ func _ready():
     if current_scene == null:
         current_scene = "res://scenes/game/maps/map1.tscn"
 
-    switch_scene(current_scene)
+    switch_scene(current_scene, null, false)
+    $FadeLayer.emit_signal("fade_out")
 
-func switch_scene(scene_path, teleport_id = null):
+func switch_scene(scene_path, teleport_id = null, fade = true):
+    global_state.save.current_scene = scene_path
+    global_state.save.teleport_id = teleport_id
+
+    $Player.scene_pause()
+
+    if fade:
+        $FadeLayer.emit_signal("fade_in", self, "_switch_scene")
+    else:
+        _switch_scene()
+
+func _switch_scene():
     if $Scene.get_child_count() > 0:
         for n in $Scene.get_children():
             n.queue_free()
 
-    global_state.save.current_scene = scene_path
+    var scene_path = global_state.save.current_scene
+    var teleport_id = global_state.save.teleport_id
 
     var scene = load(scene_path)
     var scene_instance = scene.instance()
@@ -42,7 +55,8 @@ func switch_scene(scene_path, teleport_id = null):
     # Snap player to the grid
     $Player.position.x = round(position.x / 16) * 16
     $Player.position.y = round(position.y / 16) * 16
-    $Player.scene_pause()
+
+    $FadeLayer.emit_signal("fade_out")
 
 func get_teleporter_position(scene_instance, teleport_id):
     var teleporter = find_teleporter(scene_instance, teleport_id)

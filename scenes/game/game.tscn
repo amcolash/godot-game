@@ -1,15 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/game/game.gd" type="Script" id=1]
 [ext_resource path="res://scenes/game/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/ui/menus/pause/pause.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/util/fps.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/ui/controller/controller.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/util/fade_layer.gd" type="Script" id=6]
 
-[node name="Game Root" type="Node" index="0"]
+[node name="Game Root" type="Node"]
 
 script = ExtResource( 1 )
-use_grid = true
+use_grid = false
 
 [node name="Scene" type="Node" parent="." index="0"]
 
@@ -20,5 +21,43 @@ use_grid = true
 [node name="FPS" parent="." index="3" instance=ExtResource( 4 )]
 
 [node name="Controller" parent="." index="4" instance=ExtResource( 5 )]
+
+[node name="FadeLayer" type="CanvasLayer" parent="." index="5"]
+
+editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 6 )
+fade_duration = 0.6
+
+[node name="Background" type="ColorRect" parent="FadeLayer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 0 )
+
+[node name="Tween" type="Tween" parent="FadeLayer" index="1"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
+[connection signal="fade_in" from="FadeLayer" to="FadeLayer" method="fade_in"]
+
+[connection signal="fade_out" from="FadeLayer" to="FadeLayer" method="fade_out"]
 
 

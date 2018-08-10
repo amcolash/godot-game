@@ -16,5 +16,6 @@ position = Vector2( 416.11, 168.977 )
 [node name="Foreground 2" parent="." index="4"]
 
 z_index = 1
+_sections_unfolded = [ "Z Index" ]
 
 
