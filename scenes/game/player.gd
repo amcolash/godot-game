@@ -23,7 +23,7 @@ func ready():
     if fade_layer != null:
         $SceneTimer.wait_time = fade_layer.fade_duration * 1.5
 
-func _physics_process(delta):
+func _process(delta):
     if $SceneTimer.get_time_left() > 0:
         return
 
@@ -40,15 +40,16 @@ func step_move(action, dir):
         var collision = move_and_collide(direction * SPEED)
         handle_collisions(collision)
 
-        $Camera2D.align()
-
         # If we will move past our target on next move
         if step == CELL_SIZE / SPEED:
             direction = STOP
             step = 0
+
             # Snap to grid at end of movement
             position.x = round(position.x / 16) * 16
             position.y = round(position.y / 16) * 16
+
+    $Camera2D.align()
 
 func handle_collisions(collision):
     if (collision != null &&
