@@ -223,7 +223,9 @@
  <objectgroup name="Object Layer">
   <object id="2" name="Teleport" x="672" y="448" width="16" height="16">
    <properties>
-    <property name="Teleport" value="0"/>
+    <property name="TeleportID" type="int" value="0"/>
+    <property name="TeleportOffset" value="S"/>
+    <property name="TeleportScene" value="res://scenes/game/maps/map1.tscn"/>
    </properties>
   </object>
   <object id="7" name="Start" x="232" y="296">

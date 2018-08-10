@@ -10,12 +10,15 @@ var options = {
     "vsync": true
 }
 
-var game = {
+var save = {
     "filename": "save1.save",
     "current_scene": null,
     "position": null
 }
 
-# Called after a load to set some special things up
+var Root = null
+var Player = null
+
+# Called after a load to set things up
 func post_load_init():
     OS.set_use_vsync(options.vsync);

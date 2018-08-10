@@ -17,12 +17,4 @@ position = Vector2( 416.11, 168.977 )
 
 z_index = 1
 
-[node name="Object Layer" parent="." index="5"]
-
-editor/display_folded = false
-
-[node name="Pit" parent="Object Layer" index="0"]
-
-editor/display_folded = false
-
 
