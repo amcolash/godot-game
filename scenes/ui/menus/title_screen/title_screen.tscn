@@ -6,7 +6,7 @@
 [ext_resource path="res://resources/themes/ui_theme.tres" type="Theme" id=4]
 [ext_resource path="res://scenes/util/fps.tscn" type="PackedScene" id=5]
 
-[node name="Title Screen" type="Node"]
+[node name="Title Screen" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

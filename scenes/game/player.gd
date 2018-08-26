@@ -37,6 +37,8 @@ func step_move(action, dir):
         direction = dir
         step += 1
 
+        update_rotation()
+
         var collision = move_and_collide(direction * SPEED)
         handle_collisions(collision)
 
@@ -61,6 +63,17 @@ func handle_collisions(collision):
                 global_state.Root.switch_scene(teleport_scene, teleport_id)
             else:
                 emit_signal("collision_event", collision)
+
+func update_rotation():
+    var rotation = 180
+    if direction == DOWN:
+        rotation = 0
+    elif direction == LEFT:
+        rotation = 90
+    elif direction == RIGHT:
+        rotation = 270
+
+    $Sprite.rotation_degrees = rotation
 
 func scene_pause():
     direction = STOP
