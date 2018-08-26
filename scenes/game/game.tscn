@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/ui/controller/controller.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/util/fade_layer.gd" type="Script" id=6]
 
-[node name="Game Root" type="Node"]
+[node name="Game Root" type="Node" index="0"]
 
 script = ExtResource( 1 )
 use_grid = false
